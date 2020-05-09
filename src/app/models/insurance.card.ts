@@ -1,6 +1,16 @@
 
 export class InsuranceCard {
 
+    constructor(){
+        this.MemberId = '';
+        this.Group = '';
+        this.Issuer = '';
+        this.CarrierName = '';
+        this.CarrierType = '';
+        this.ImageUrl= '';
+        this.PlanName = '';
+
+    }
     MemberId: string;
     Group: string;
     Issuer: string;
@@ -11,5 +21,6 @@ export class InsuranceCard {
     Participants: any;
     Dependents: any;
 }
+
 
 

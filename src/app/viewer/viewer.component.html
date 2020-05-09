@@ -1,5 +1,5 @@
-<div class="example-container"  style="float: left">
-    <div>
+<div class="example-container"  style="float: left" >
+    <div *ngIf="!viewScanner">
       <div class="input-group" >
         <label for="carrierName">Insurance Carrier:</label>
         <input type="text" class="input-group-text" id="carrierName" [(value)]="card.CarrierName" />
@@ -17,12 +17,12 @@
         <input id="member" class="input-group-text" [(value)]="card.MemberId" />
       </div>
     </div>
-  </div>
-  <div >
+  <!-- <div >
       <img [src]="card.ImageUrl" width="500px" />
-    </div>
-  <div *ngIf="" >
+    </div> -->
+  <div *ngIf="viewScanner" >
     <card-scanner (filechanged)="onFileChanged($event)"></card-scanner>
   </div>
-  <!-- <button (click)="showUploader()" class="btn btn-dark">add new card</button> -->
+  <button (click)="showUploader()" class="btn btn-dark">add new card</button>
+</div>
   
