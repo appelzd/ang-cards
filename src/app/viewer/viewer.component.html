@@ -1,0 +1,28 @@
+<div class="example-container"  style="float: left">
+    <div>
+      <div class="input-group" >
+        <label for="carrierName">Insurance Carrier:</label>
+        <input type="text" class="input-group-text" id="carrierName" [(value)]="card.CarrierName" />
+      </div>
+      <div class="input-group">
+        <label for="carrierType">Insurance Type/Location:</label>
+        <input type="text" class="input-group-text" id="carrierType" [(value)]="card.CarrierType" />
+      </div>
+      <div class="input-group">
+        <label for="group">Group Number:</label>
+        <input id="group" class="input-group-text" [(value)]="card.Group" />
+      </div>
+      <div class="input-group">
+        <label for="member">Member ID:</label>
+        <input id="member" class="input-group-text" [(value)]="card.MemberId" />
+      </div>
+    </div>
+  </div>
+  <div >
+      <img [src]="card.ImageUrl" width="500px" />
+    </div>
+  <div *ngIf="" >
+    <card-scanner (filechanged)="onFileChanged($event)"></card-scanner>
+  </div>
+  <!-- <button (click)="showUploader()" class="btn btn-dark">add new card</button> -->
+  
