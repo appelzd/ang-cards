@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { ScannerComponent } from './scanner/scanner.component';
 import { ViewerComponent } from './viewer/viewer.component';
+import AwsService from './services/aws.service';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,7 @@ import { ViewerComponent } from './viewer/viewer.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [AwsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
